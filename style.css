@@ -1,0 +1,177 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Nav Styles */
+nav {
+    border-bottom: 0.1rem solid black;
+    box-shadow: 5px 2px #888888;
+    position: sticky;
+    top: 0;
+    /* background-color: aliceblue; */
+    background-image: linear-gradient(blue, rgb(0, 225, 255));
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 6px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+ul li a:hover {
+    color: greenyellow;
+}
+
+/*End Nav Styles */
+
+
+/* Side Bar Styles */
+.side-bar {
+    min-height: 95vh;
+    background-image: linear-gradient(blue, rgb(0, 225, 255));
+    border: 1px solid black;
+    box-shadow: 2px 2px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Avatar style for User */
+.avatar {
+    width: 50%;
+    border-radius: 50%;
+    margin: 10% 0%;
+}
+
+/* this class to handles user missions like (num of tasks,num of active tasks and num of completed tasks)  */
+.the-missions {
+    font-size: 25px;
+}
+
+.numbers {
+    font-size: 25px;
+    display: flex;
+    justify-content: end;
+}
+
+
+/* Start page content styles */
+.content {
+    background-image: linear-gradient(gray, rgb(0, 225, 255));
+    border: 1px solid black;
+    box-shadow: 2px 2px #888888;
+}
+
+#inputItem {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 70%;
+    text-align: center;
+}
+
+#inputItem::placeholder {
+    font-weight: bold;
+    color: white;
+}
+
+input:focus {
+    color: white;
+}
+
+.task-btn {
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 25%;
+    background-color: gray;
+}
+
+.scroll{
+    height: 40vh;
+    overflow: scroll;
+}
+
+.each-task {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    height: 10vh;
+}
+.each-task div p{
+    color: white;
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.buttons span:hover{
+    cursor: pointer;
+}
+
+
+/* style for setting button */
+#slider{
+    visibility: hidden;
+}
+
+#setting-btn{
+    height: 50px;
+    width: 80px;
+    border: 3px solid teal;
+    border-radius: 45px;
+    position: relative;
+}
+#setting-lab{
+    background-color: teal;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: -15px;
+    transition: all 0.5s;
+}
+#slider:checked + #setting-lab{
+transform: translateX(28px);
+}
+#setting-lab::before{
+    content: "OFF";
+    color: white;
+    position: relative;
+    top: 8px;
+    left: 5px;
+}
+#slider:checked + #setting-lab::before{
+    content: "ON";
+    color: white;
+    position: relative;
+    top: 8px;
+    left: 5px;
+}
+
+
+.showInput{
+    display: none;
+}
+.titleTask{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    text-align: center;
+}
