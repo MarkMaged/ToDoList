@@ -110,20 +110,34 @@ function edit(el) {
     let ele3 = ele2.getElementsByTagName("input")[0];
     ele3.classList.toggle("showInput")
 
-    inputEdit.forEach(input => {
-        input.addEventListener("keypress", x)
-    })
-    function x(ev) {
-        if (ev.key === "Enter") {
-            let objEdit = {
-                id: eleID,
-                title: ele3.value,
-                body: ""
-            }
-            
-        }
 
+    let search = arr.find((ell) => {
+        return ell.id === eleID
+    })
+
+    if (search.id) {
+        inputEdit.forEach(input => {
+            input.addEventListener("keypress", x)
+        })
+        function x(ev) {
+            if (ev.key === "Enter") {
+                let objEdit = {
+                    id: eleID,
+                    title: ele3.value,
+                    body: ""
+                }
+                ele.classList.toggle("showInput").search
+                ele3.classList.toggle("showInput").search
+
+            }
+
+        }
     }
+
+
+
+
+
 }
 
 //------------------------------------------Completed Tasks ---------------------------------------------------------------------------------
